@@ -1,100 +1,38 @@
 {
-  "name": "react-avatar-editor",
-  "version": "11.0.7",
-  "description": "Avatar / profile picture component. Resize and crop your uploaded image using a intuitive user interface.",
-  "main": "dist/index.js",
+  "name": "my-component",
+  "version": "1.0.0",
+  "description": "my-component React component",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "lint": "eslint --cache --ext .js,.jsx src",
-    "test": "NODE_ENV=test jest",
-    "test:watch": "NODE_ENV=test jest --watch",
-    "demo:build": "NODE_ENV=production webpack",
-    "demo:watch": "webpack-dev-server",
-    "prepublish": "yarn run lint && yarn run test && yarn run clean && yarn run build",
-    "postversion": "git push --tags origin HEAD"
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
   },
-  "author": {
-    "name": "Moritz Schwoerer",
-    "email": "mr.mosch@gmail.com"
-  },
-  "contributors": [
-    {
-      "name": "Daniel Lehr",
-      "email": "daniellehr@gmx.de"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mosch/react-avatar-editor.git"
-  },
-  "license": "MIT",
-  "keywords": [
-    "react-component",
-    "reactjs",
-    "react",
-    "canvas",
-    "avatar",
-    "editor",
-    "profile",
-    "image"
-  ],
-  "dependencies": {
-    "prop-types": "^15.5.8"
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "16.x"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "7.2.2",
-    "babel-jest": "22.4.1",
-    "babel-loader": "^6.4.1",
-    "babel-plugin-external-helpers": "6.22.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-env": "1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "eslint": "4.18.2",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-config-react-app": "^2.1.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-react": "^7.7.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "jest": "22.4.2",
-    "prettier": "1.16.4",
-    "prop-types": "^15.5.8",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-dropzone": "^4.2.3",
-    "rimraf": "^2.6.1",
-    "rollup": "^0.45.2",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-uglify": "3.0.0",
-    "rollup-watch": "^4.3.1",
-    "snazzy": "^7.0.0",
-    "webpack": "^2.3.3",
-    "webpack-dev-server": ">=3.1.11"
+    "nwb": "0.23.x",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
-  "peerDependencies": {
-    "react": ">=0.14.0 <17.0.0",
-    "react-dom": ">=0.14.0 <17.0.0"
-  },
-  "files": [
-    "dist",
-    "src"
-  ],
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "semi": false,
-    "useTabs": false
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "jest": {
-    "testURL": "http://localhost"
-  }
+  "author": "",
+  "homepage": "",
+  "license": "MIT",
+  "repository": "",
+  "keywords": [
+    "react-component"
+  ]
 }
