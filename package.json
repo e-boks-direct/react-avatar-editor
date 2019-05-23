@@ -1,5 +1,5 @@
 {
-  "name": "my-component",
+  "name": "react-avatar-editor",
   "version": "1.0.0",
   "description": "my-component React component",
   "main": "lib/index.js",
